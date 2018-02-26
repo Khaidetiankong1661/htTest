@@ -275,6 +275,87 @@ s, i, em {
 /*search结束*/
 
 
+/*shortcut部分开始*/
+	.shortcut-nav {
+		height: 44px;
+		width: 100%;
+		border-bottom: 2px solid #b1191a;
+	}
+	.shortcut-nav-menu {
+		width: 210px;
+		height: 44px;
+		float: left;
+		position: relative;
+		z-index: 1;
+	}
+	.shortcut-nav-menu-all a {
+		display: block;
+		width: 190px;
+		height: 44px;
+		color: white;
+		padding: 0 10px;
+		background-color: #b1191a;
+		font: 400 15px/44px "microsoft yahei";
+	}
+	.shortcut-nav-menu-one {
+		height: 465px;
+		margin-top: 2px;
+		background-color: #c81623;
+		/*border-left: 1px solid #b1191a;
+		border-bottom: 1px solid #000;*/
+	}
+	.shortcut-nav-menu-one div {
+		height: 31px;
+		font: 400 14px/31px "微软雅黑";
+		color: #fff;
+		padding: 0 10px;
+	}
+	.shortcut-nav-menu-one div:hover {
+		background-color: #fff;
+	}
+	.shortcut-nav-menu-one div:hover a {
+		color: #C81623;
+	}
+	.shortcut-nav-menu-one h3 {
+		float: left;
+	}
+	.shortcut-nav-menu-one a {
+		color: #fff; 
+	}
+	.shortcut-nav-menu-one i {
+		float: right;
+	}
+	
+	
+	.shortcut-nav-items {
+		width: 730px;
+		height: 44px;
+		float: left;
+	}
+	.shortcut-nav-items li {
+		float: left;
+	}
+	.shortcut-nav-items a {
+		display: block;
+		height: 44px;
+		padding: 0 20px;
+		color: #333;
+		font:  400 16px/44px "microsoft yahei";
+	}
+	.shortcut-nav-items a:hover {
+		color: #c81623;
+	}
+	.shortcut-nav-img {
+		width: 200px;
+		height: 40px;
+		float: right;
+		margin-top: -10px;
+		margin-right: 50px;
+	}
+
+/*shortcut部分结束*/
+
+
 /*footer顶部开始*/
 	.footer-top-slogen {
 		width: 100%;
