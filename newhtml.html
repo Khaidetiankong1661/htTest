@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				margin: 20px;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			function fn(obj){
+				var target = document.getElementById(obj);
+				target.style.display = "block";
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+<button onclick="fn('demo1');">1</button>
+<button onclick="fn('demo2');">2</button>
+<button onclick="fn('demo3');">3</button>
+<button onclick="fn('demo4');">4</button>
+
+<div id="demo1">1</div>
+
+<div id="demo2">2</div>
+
+<div id="demo3">3</div>
+<div id="demo4">4</div>
+		
+	</body>
+</html>
