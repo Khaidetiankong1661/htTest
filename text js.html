@@ -19,6 +19,39 @@
 				
 			}
 		</script>-->
+		<script type="text/javascript">
+						
+			function getClass(classname){
+//				if(document.getElementsByClassName){
+//					return document.getElementsByClassName(classname);
+//				}
+				
+				var arr = [];
+				var dom = document.getElementsByTagName("*");
+				console.log(dom.length);
+
+
+
+				for (var i = 0; i < dom.length; i++) {
+					
+					if (dom[i] == classname) {
+						arr.push(dom[i]);
+					}
+					
+//					var txt = dom[i].className.split(" ");
+//					for (var j = 0; j < txt.length; j++) {
+//						if (txt[j] == classname) {
+//							arr.push(dom[i]); //这里要的是div
+//						}
+//				    }
+
+				}
+				return arr;
+			}
+//			getClassName("right");
+//console.log(111);
+			console.log(getClass("demo").length);
+		</script>
 	</head>
 	<body>
 		<div id="demo">
