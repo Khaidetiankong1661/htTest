@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				font-size: 30px;
+				text-align: center;
+				color: pink;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var demo = document.getElementById("demo");
+				
+				var endTime = new Date("2018/11/12 12:12:12");
+				setInterval(clocik, 1000);
+				function clocik(){
+					var nowTime = new Date();
+					var second = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+					
+					var d = parseInt(second / 3600 / 24);  // 天
+					var h = parseInt(second / 3600 % 24);  // 小时
+					var m = parseInt(second / 3600 % 60);  // 分钟
+					var s = parseInt(second % 60);         // 当前秒数
+					
+					console.log(s);
+					d<10 ? d="0"+d : d;
+					h<10 ? h="0"+h : h;
+					m<10 ? m="0"+m : m;
+					s<10 ? s="0"+s : s;
+					
+					demo.innerHTML = "倒计时:" + d + "天" + h + "小时" + m + "分钟" + s + "秒";
+				}
+				
+				
+				
+			}
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="demo">
+			
+		</div>
+	</body>
+</html>
