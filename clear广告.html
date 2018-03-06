@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img {
+				position: absolute;
+				top: 0;
+			}
+			#left {
+				left: 0;
+				
+			}
+			#right {
+				right: 0;
+			}
+			#demo {
+				margin: 300px auto;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id) {return document.getElementById(id);}
+			function hiden(id){
+				$(id).style.display = "none";
+			}
+			function show(id){
+				$(id).style.display = "block";
+			}
+			setTimeout(closeAD, 3000);
+			function closeAD(){
+				hiden("left");
+				hiden("right");
+			}
+			
+//			var demo = $("demo");
+			var demo = document.getElementById("demo");
+			var count = 6;
+			var speed = 1000;
+			setTimeout(goindexpage, speed);
+			function goindexpage(){
+				count --;
+				        demo.innerHTML = "<a href='http://www.baidu.com'>本页面将在第"+count+"秒钟之后跳转页面</a>";
+
+
+//				demo.innerHTML = "<a href='http://baidu.com'>本页将要在第"+count+"秒钟之后跳转页面</a>";
+				if (cout <= 0) {
+					window.location.href = "http://baidu.com";
+				} else {
+					setTimeout(arguments.callee,speed);
+				}
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<img src="img/1.gif" id="left"/>
+		<img src="img/2.gif" id="right"/>
+		
+		<p>哇啦啦啦 文字 文字</p>
+		
+		<p>哇啦啦啦 文字 文字</p>
+		<p>哇啦啦啦 文字 文字</p>
+		<p>哇啦啦啦 文字 文字</p>
+		<p>哇啦啦啦 文字 文字</p>
+		<p>哇啦啦啦 文字 文字</p>
+		<p>哇啦啦啦 文字 文字</p>
+		
+		<div id="demo">
+			
+		</div>
+	</body>
+</html>
