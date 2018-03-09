@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 300px;
+				height: 500px;
+				border: 1px solid red;
+				margin: 100px;
+				position: relative;
+				overflow: hidden;
+			}
+			.content {
+				height: auto;
+				padding: 5px 18px 5px 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.scroll {
+				width: 18px;
+				height: 100%;
+				background-color: #E5E5E5;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.bar {
+				width: 100%;
+				height: 100px;
+				background-color: #37C2DF;
+				cursor: pointer;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box">
+			<div class="content">
+				
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+	
+			</div>
+			<div class="scroll">
+				<div class="bar">
+					
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var box = document.getElementById("box");
+	var content = box.children[0];
+	var scroll = box.children[1];
+	var bar = scroll.children[0];
+	
+	startScroll(bar, box);
+	
+	function startScroll(obj, target) {
+			bar.onmousedown = function(event){
+		var event = event || window.event;
+//		var offx = event.clientX - this.offsetLeft;
+		var offy = event.clientY - this.offsetTop;
+		var that = this;
+		
+		var contentOffY = content.offsetHeight - box.offsetHeight;
+		var barOffY = box.offsetHeight - bar.offsetHeight;
+		
+		document.onmousemove = function(){
+			var event = event || window.event;
+			var topY = event.clientY - offy;
+			
+			if (topY < 0) {
+				topY = 0;
+			}
+			
+			if (topY > that.offsetParent.offsetHeight - that.offsetHeight) {
+				topY = that.offsetParent.offsetHeight - that.offsetHeight;
+			}
+			
+			that.style.top = topY +"px";
+			
+			content.style.top = - contentOffY / barOffY * that.offsetTop + "px";
+			
+			window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();   // 防止拖动滑块的时候， 选中文字
+
+
+		}
+		
+	}
+	document.onmouseup = function(){
+		document.onmousemove = null;
+	}
+	
+	
+	}
+	
+
+	
+</script>
