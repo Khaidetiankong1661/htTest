@@ -111,17 +111,36 @@ left: 0;
 	var timer = null;
 	var key = 0;
 	var square = 0;
-//	timer = setInterval(autoPlay,2000);
+	timer = setInterval(autoPlay,2000);
 	function autoPlay(){
 		key ++;
 		if (key>ulLis.length-1) {
 			ul.style.left = 0;
 			key = 1;
 		}
-//		animate(ul, -key *500);
+		animate(ul, -key *500);
+     
+     
+     
+     
      
     square ++;
+    if (square > olLis.length - 1) {
 
+		square = 0;
+    }
+    for (var i = 0; i < olLis.length; i++) {
+    		olLis[i].className = "";
+    }
+    olLis[square].className = "current";
+
+	}
+	
+	box.onmouseover = function(){
+		clearInterval(timer);
+	}
+	box.onmouseout = function(){
+		timer = setInterval(autoplay,1000);
 	}
 	
 </script>
