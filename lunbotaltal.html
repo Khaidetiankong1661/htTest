@@ -4,45 +4,56 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
-			*{
-				margin: 0;
-				padding: 0;
+			*{margin: 0;padding: 0;}
+			ul, li {
 				list-style: none;
-				border: 0;
 			}
 			.all {
-				width: 500px;height: 200px;padding: 7px;
+				width: 500px;
+				height: 200px;
 				border: 1px solid #CCCCCC;
-margin: 100px auto;
-position: relative;
+				padding: 7px;
+				margin: 50px auto;
+				position: relative;
 			}
 			.screen {
-				width: 500px;height: 200px;overflow: hidden;position: absolute;
+				width: 500px;
+				height: 200px;
+				position: relative;
 			}
-			.screen li {width: 500px;height: 200px;float: left;overflow: hidden;
+			.screen li {
+				width: 500px;
+				height: 200px;
+				
+				float: left;
 			}
-			.screen ul {float: left;position: absolute;top: 0;
-left: 0;
-				width: 30000px;
+			.screen ul {
+				width: 10000px;
+				position: absolute;
+				left: 0;
+				top: 0;
 			}
 			.all ol {
 				position: absolute;
-				right: 10px;
+				/*float: left;*/
 				bottom: 10px;
-				line-height: 20px;
+				right: 10px;
+				/*width: 100px;*/
 				text-align: center;
-			}
-			.all ol li {
-				width: 20px;
-				height: 20px;
-				background: #CCCCCC;
-				border: 1px solid #CCCCCC;
-				float: left;
-				margin-left: 10px;
-				cursor: pointer;
+				line-height: 20px;
 				
 			}
-			.all ol li.current{background-color: yellow;}
+			.all ol li {
+				color: black;
+				width: 20px;
+				background-color: #fff;
+				margin-left: 10px;
+				float: left;
+			}
+			.all ol li.current {
+				background: yellow;
+			} 
+
 		</style>
 	</head>
 	<body>
@@ -56,91 +67,23 @@ left: 0;
 					<li> <img src="img/lunbototal/5.jpg" width="500" height="200"/> </li>
 				</ul>
 			</div>
-	
-			
+			<ol>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
 		</div>
 	</body>
 </html>
 
 
 <script type="text/javascript">
-	
-	function animate(obj, target){
-		clearInterval(obj.timer);
+	function animated(obj, target) {
 		
-		var speend = obj.offsetLeft < target ? 15 : -15;
-		obj.timer = setInterval(function(){
-			var result = target - obj.offsetLeft;
-			obj.style.left = obj.offsetLeft + speend + "px";
-			if (Math.abs(result) <= 15) {
-				clearInterval(obj.timer);
-				obj.style.left = target +"px";
-			}
-		}, 10)
-		
-	}
-	
-	var all = document.getElementById("all");
-	var ul = document.getElementById("ul");
-	var ulLis = ul.children;
-	
-	// 动态插入小标签
-	ul.appendChild(ulLis[0].cloneNode(true));
-	var ol = document.createElement("ol");
-	all.appendChild(ol);
-	for (var i = 0; i < ulLis.length; i ++) {
-		var li = document.createElement("li");
-		li.innerHTML = i + 1;
-		ol.appendChild(li);
-	}
-	ol.children[0].className = "current";
-	
-	
-	// 鼠标放在小快快上
-	var olLis = ol.children;
-	for (var i = 0; i < olLis.length; i++) {
-		olLis[i].onmouseover = function(){
-			for (var j = 0; j < olLis.length; j ++) {
-				olLis[j].className = "";
-			}
-			this.className = "current";
-		}
-		
-	}
-	
-	var timer = null;
-	var key = 0;
-	var square = 0;
-	timer = setInterval(autoPlay,2000);
-	function autoPlay(){
-		key ++;
-		if (key>ulLis.length-1) {
-			ul.style.left = 0;
-			key = 1;
-		}
-		animate(ul, -key *500);
-     
-     
-     
-     
-     
-    square ++;
-    if (square > olLis.length - 1) {
-
-		square = 0;
-    }
-    for (var i = 0; i < olLis.length; i++) {
-    		olLis[i].className = "";
-    }
-    olLis[square].className = "current";
-
-	}
-	
-	box.onmouseover = function(){
-		clearInterval(timer);
-	}
-	box.onmouseout = function(){
-		timer = setInterval(autoplay,1000);
+		var current = target - obj.style.offsetLeft;
+		var setp = target
 	}
 	
 </script>
