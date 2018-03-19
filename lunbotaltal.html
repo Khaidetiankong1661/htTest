@@ -77,9 +77,9 @@
 	function animatenew(obj, target) {
 		
 		clearInterval(obj.timer);
+		var speed = obj.offsetLeft < target ? 15 : -15;
 		obj.timer = setInterval(function(){
-			var speed = obj.offsetLeft < target ? 15 : -15;
-		
+			
 		    obj.style.left = obj.offsetLeft + speed +"px";
 		    var spa = target - obj.offsetLeft; 
 		    if (Math.abs(spa) <= 15) {
@@ -87,11 +87,13 @@
 		    		obj.style.left = target +"px";
 		    }
 		
-		}, 100)
+		}, 10)
 	}
 	
-	
-	var all = document.getElementById("all");
+
+	 
+	window.onload = function(){
+			var all = document.getElementById("all");
 	var ul = document.getElementById("ul");
 	
 	var imgArr = ul.children;
@@ -110,15 +112,14 @@
 	all.appendChild(ol);
 	
 	ol.children[0].className = "current";
+	var ollis = ol.children;
 	
-	window.onload = function(){
-		
 		var timer = null;
 		
 		var key = 0;
+		var squre = 0;
 		
-		
-		timer = setInterval(autopalyss, 1000);
+		timer = setInterval(autopalyss, 2000);
 		function autopalyss(){
 			key ++;
 			
@@ -126,16 +127,24 @@
 				ul.style.left = 0;
 				key = 1;
 			} 
-			animatenew(ul, -key * 500);
+			animatenew(ul, -key*500);
 			
-			
+			squre++;
+			if (squre > ollis.length - 1) {
+				squre = 0;
+			} 
+			for (var i = 0; i< ollis.length; i++) {
+				ollis[i].className = "";
+			}
+			ollis[squre].className = "current";
 		}
-		
-//		for (var i = 0; i< imgArr.length; i++) {
-//			animatenew(ul, -i * 500);
-//		}
-//		
-		
+		all.onmouseover = function(){
+			clearInterval(timer);
+		}
+		all.onmouseout = function(){
+			timer = setInterval(autopalyss,2000);
+		}
+
 		
 	}
 
