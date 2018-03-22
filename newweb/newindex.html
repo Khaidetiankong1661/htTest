@@ -4,18 +4,25 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
-			.site-nav {
-				width: 100%;
-				height: 30px;
-				background-color: #E5E5E5;
-				line-height: 30px;
-			}
-			
 			.site-nav-box {
-				margin: 0px 50px 0 50px;
+				width: 1210px;
+				margin: 0 auto;
+			}
+			.site-nav {
+				height: 30px;
+				background-color: #F9F9F9;
+				line-height: 30px;
+				
+			}
+			.site-nav .fore{
+				position: relative;
+				padding: 0 25px 0 10px;
+				/*background-color: palegoldenrod;*/
 			}
 			.fl {
 				float: left;
+				font: 400 12px/30px "微软雅黑";
+				width: ;
 			}
 			.fr {
 				float: right;
@@ -28,26 +35,122 @@
 		   }
 			.site-nav li {
 				float: left;
-				padding: 0 10px;
+				font: 400 12px/30px "微软雅黑";
 				/*background-color: red;*/
-				/*border: 1px solid #333333;*/
+				padding: 0 10px;
 			}
+			.site-nav a {
+				text-decoration: none;
+				color: #666666;
+				/*border: 1px solid red;*/
+				text-align: center;
+				/*background-color: black;*/
+				
+			}
+			.site-nav-send {
+				/*border: 1px solid #000000;*/
+				position: absolute;
+				/*padding: 0 35px 0 60px;*/
+			}
+			.site-nav i {
+				width: 15px;
+				height: 7px;
+				position: absolute;
+				top: 12px;
+				right: 8px;
+				/*background-color: red;*/
+				overflow: hidden;
+				
+			}
+			.site-nav s {
+				position: absolute;
+				/*bottom: -15px;*/
+				top:0;
+				font: 400 12px/130% "consolas";
+				
+			}
+			.site-nav li.shu {
+			    padding: 0;
+				width: 1px;
+				height: 15px;
+				margin-top: 9px;
+				background-color: #CCCCCC;
+			}
+			.site-nav .jd-sj{
+				position: relative;
+				padding-left: 25px;
+			}
+			.site-nav .fore span {
+				position: absolute;
+				top: 5px;
+				left: 7px;
+				width: 15px;
+				height: 20px;
+				background: url("../img/tel.png") no-repeat;
+			}
+			
+			.banner {
+				background-color:  #37C2FB;
+			}
+			.site-nav-close {
+				position: absolute;
+				top: 3px;
+				right: 3px;
+				width: 19px;
+				height: 19px;
+				background: url("../img/close-banner.png") no-repeat;
+			}
+			.site-nav-close:hover {
+				background-position: bottom;
+			}
+			.banner .close {
+				position: relative;
+			}
+			
 			
 		</style>
 	</head>
 	<body>
-		<!--site-nav顶部开始-->
+		<!--site-nav顶部-开始-->
 		<div class="site-nav">
 			<div class="site-nav-box">
 				<div class="fl">
-					送至：北京
+					<div class="site-nav-send">
+						送至：北京
+						<i><s>◇</s></i>
+					</div>
 				</div>
 				<div class="fr">
 					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
+						<li><a href="#">你好，请登录 </a><a href="#">免费注册</a></li>
+						<li class="shu"></li>
+						<li><a href="#">我的订单</a></li> 
+						<li class="shu"></li>
+						<li class="fore"><a href="#" >我的京东
+						<i><s>◇</s></i>
+						</a></li>
+						<li class="shu"></li>
+						<li><a href="#">京东会员</a></li>
+						<li class="shu"></li>
+						<li><a href="#">企业采购</a></li>   
+						<li class="shu"></li>
+						<li class="fore jd-sj"><a href="#" >手机京东
+						<span></span>
+						<i><s>◇</s></i>
+						</a></li>   
+						<li class="shu"></li>
+						<li class="fore"><a href="#" >关注京东
+						<i><s>◇</s></i>
+						</a></li>   
+						<li class="shu"></li>
+						<li  class="fore"><a href="#">客户服务
+						<i><s>◇</s></i>
+						</a></li>   
+						<li class="shu"></li>
+						<li  class="fore"><a href="#">网站导航
+						<i><s>◇</s></i>
+						</a></li> 
+						<!--<li class="fore"></li>-->
 					</ul>
 				</div>
 				
@@ -55,6 +158,46 @@
 			
 		</div>
 	    <!--site-nav顶部结束-->
+	    
+	    
+	     <!--banner开始-->
+	     <div class="banner">
+	     	<div class="site-nav-box close">
+	     		<a href="#">
+	     			<img src="../img/top-banner.jpg"/>
+	     		</a>
+	     		<a href="#" class="site-nav-close"></a>
+	     	</div>
+	     </div>
+	     
+	     <!--banner结束-->
 	
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
