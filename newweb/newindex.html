@@ -125,19 +125,30 @@
 				background-color: palegoldenrod;
 			}
 			.search-right {
-				width: 200px;
+				width: 130px;
 				height: 43px;
 				float: right;
 				border: 1px solid #666666;
 				margin-top: 49px;
 				background-color: #F5F5F5;
-				margin-left: 20px;
+				padding-left: 50px;
+				position: relative;
 			}
 			.search-right a {
 				text-decoration:  none;
 				color: #666666;
 				font: 400 13px/43px "微软雅黑";
 			}
+			
+			.search-right .tip1 {
+				position: absolute;
+				left: 10px;
+				top: 12px;
+				width: 18px;
+				height: 16px;
+				background: url("../img/tel.png") no-repeat 0 -58px;
+			}
+			
 			/*search结束*/
 			
 		</style>
@@ -214,7 +225,7 @@
 	     	</div>
 	     	<div class="search-right">
 	     		<a href="#">我的购物车</a>
-	     		<i class="tip1">图片</i>
+	     		<i class="tip1"></i>
 	     		<i class="tip2">></i>
 	     		<i class="tip3">8</i>
 	     	</div>
