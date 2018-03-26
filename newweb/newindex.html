@@ -118,18 +118,13 @@
 			.search-left img {
 				/*display: inline-block;*/
 			}
-			.search-middle-top {
-				width: 600px;
-				height: 99px;
-				float: left;
-				background-color: palegoldenrod;
-			}
+			
 			.search-right {
 				width: 130px;
 				height: 43px;
 				float: right;
 				border: 1px solid #666666;
-				margin-top: 49px;
+				margin-top: 18px;
 				background-color: #F5F5F5;
 				padding-left: 50px;
 				position: relative;
@@ -149,6 +144,73 @@
 				background: url("../img/tel.png") no-repeat 0 -58px;
 			}
 			
+			.search-right .tip2 {
+				right: 5px;
+				position: absolute;
+				line-height: 43px;
+				right: 15px;
+	
+			}
+			.search-right .tip3 {
+				position: absolute;
+				top: -10px;
+				left: 113px;
+				background-color: red;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				color: white;
+				border-radius: 10px 10px 10px 0;
+				
+			}
+			.search-middle-top {
+				width: 600px;
+				height: 40px;
+				float: left;
+				background-color: palegoldenrod;
+				padding-top: 20px;
+			}
+			.search-middle-top input {
+				width: 449px;
+				padding-left: 5px;
+				height: 32px;
+				border: 2px solid #B1191A;
+				float: left;
+				color: #CCCCCC;
+				/*border-right: 0;*/
+			}
+			.search-middle-top button {
+				width: 60px;
+				height: 38px;
+				float: left;
+				border-left: 0;
+				background-color: #B1191A;
+				border:1px solid #B1191A;
+				color: white;
+				
+				font: 400 16px/38px "microsoft yahei";
+			}
+			.search-middle-bottom {
+				width: 520px;
+				background-color: red;
+				height: 28px;
+				float: left;
+				margin-left: 0;
+			}
+			.search-middle-bottom li {
+				float: left;
+				margin-right: 10px;
+				margin-left: 0;
+				
+			}
+			.search-middle-bottom li a {
+				font: 400 13px/20px "agency fb";
+				/*padding-right: 6px;*/
+				text-decoration: none;
+				color: #000000;
+				/*margin-left: 0;*/
+			}
 			/*search结束*/
 			
 		</style>
@@ -221,7 +283,8 @@
 	     		<img src="../img/logo.png"/>
 	     	</div>
 	     	<div class="search-middle-top">
-	     		
+	     		<input type="text" name="xiangji" id="xiangji" value="运动相机" />
+	     		<button>搜索</button>
 	     	</div>
 	     	<div class="search-right">
 	     		<a href="#">我的购物车</a>
@@ -230,7 +293,17 @@
 	     		<i class="tip3">8</i>
 	     	</div>
 	     	<div class="search-middle-bottom">
-	     		
+	     		<ul>
+	     			<li><a href="#">30抵40</a></li>
+	     			<li><a href="#">69元秒风扇</a></li>
+	     			<li><a href="#">农用物资</a></li>
+	     			<li><a href="#">200减40</a></li>
+	     			<li><a href="#">啤酒趴</a></li>
+	     			<li><a href="#">早教机</a></li>
+	     			<li><a href="#">柠檬</a></li>
+	     			<li><a href="#">0元试用</a></li>
+	     			<li><a href="#">海苔</a></li>
+	     		</ul>
 	     	</div>
 	     	
 	     </div>
@@ -239,6 +312,7 @@
 	     
 	</body>
 </html>
+
 
 
 
