@@ -1,0 +1,130 @@
+#w {
+	width: 980px;
+	margin: 0px auto;
+	border: 1px solid #00267F;
+}
+div, h, a, li, span, input, select, ul, h3{
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+#top-left {
+	float: left;
+}
+
+#top-middle {
+	float: left;
+	font: 400 12px/70px "微软雅黑";
+	margin-left: 5px;
+}
+
+#top-middle a {
+	color: #656565;
+}
+
+#top-right {
+	float: right;
+}
+
+#top-right a , #top-right-bottom{
+	font: 400 13px/30px "微软雅黑";
+	color: #3E3E3E;
+}
+ #top-right-bottom {
+ 	background: url(../imgsss/notice.gif) no-repeat left;
+ 	padding-left: 20px;
+ 	margin-left: 58px;
+ }
+ 
+#middle-nav {
+	clear: both;
+	background: url(../imgsss/img/spring_1200.gif);
+	height: 68px;
+	
+}
+
+#middle-nav-top {
+	text-align: center;
+}
+
+#middle-nav-top li {
+	display: inline-block;
+}
+
+#middle-nav-top li a {
+	padding:0 5px;
+	color: white;
+	font: 400 14px/33px "微软雅黑";
+}
+
+#middle-nav-bottom {
+	clear: both;
+	line-height: 35px;
+	font: 400 14px/35px "微软雅黑";
+	color: white;
+	padding-left: 26px;
+}
+
+#wenzi {
+	padding-left: 18px;
+}
+#middle-nav-bottom-right {
+	/*clear: both;*/
+	float: right;
+	width: 306px;
+	background: url(../imgsss/img/d3.jpg) no-repeat;
+	margin: 6px 10px 3px 0;
+	font: 400 12px/22px "微软雅黑";
+	color: black;
+}
+
+#middle-nav-bottom-right1 {
+	padding-left: 30px;
+	/*background-color: red;*/
+}
+
+#middle-nav-bottom-right2 {
+	margin-left: 67px;
+}
+
+#middle-nav-bottom-right3 {
+	margin-left: 27px;
+}
+
+#middle-left {
+	float: left;
+	width: 196px;
+}
+
+#middle-left1, #middle-left2, #middle-left3{
+	border: 1px solid #CC0000;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	width: 100%;
+	margin-top: 10px;
+}
+
+#middle-left1 h3,  #middle-left2 h3, #middle-left3 h3{
+	background: url(../imgsss/img/la_4.gif);
+	color: white;
+	text-align: center;
+	font: 400 14px/29px "微软雅黑";
+}
+
+#middle-left1 ul {
+	margin: 10px 0 12px 14px;
+}
+
+#middle-left1 li {
+	padding-left: 19px;
+}
+#middle-left1 a {
+	color: #656565;
+	font: 400 12px/19px "微软雅黑";
+}
